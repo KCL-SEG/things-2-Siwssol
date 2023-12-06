@@ -1,12 +1,14 @@
 from django import forms
+from django.core.validators import MinValueValidator, MaxValueValidator
 """Forms of the project."""
 
 # Create your forms here.
 
 class ThingForm(forms.Form):
-    name = forms.CharField(label = "name")
-    description = forms.CharField(label = "description")
-    quantity = forms.IntegerField(label = "quantity")
+    name = forms.CharField(label = "name", max_length=35)
+    description = forms.CharField(label = "description", max_length=120)
+    quantity = forms.IntegerField(label = "quantity",
+                                  validators=[MinValueValidator(0),MaxValueValidator(50))
 
     def clean(self):
         super().clean()

@@ -8,6 +8,7 @@
   </h1>
   <p>Enter some things here</p>
     <form method="post" action="">
+        {% csrf_token %}
         <label for="name" >Enter name</label><br>
         <input type="text" name="name" value={{ name }}><br>
         <label for="description">Enter description</label><br>
