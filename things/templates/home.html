@@ -6,6 +6,15 @@
   <h1>
     Things
   </h1>
-  <p>Some stuff about things goes here.</p>
+  <p>Enter some things here</p>
+    <form method="post" action="">
+        <label for="name" >Enter name</label><br>
+        <input type="text" name="name" value={{ name }}><br>
+        <label for="description">Enter description</label><br>
+        <input type="text" name="description" value={{ description }}><br>
+        <label for="quantity" >Enter quantity</label><br>
+        <input type="number" name="quantity" value={{ quantity }}><br>
+        <input type="submit" value="submit"><br>
+    </form>
 </body>
 </html>
