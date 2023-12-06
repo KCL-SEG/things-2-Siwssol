@@ -7,15 +7,16 @@
     Things
   </h1>
   <p>Enter some things here</p>
-    <form method="post" action="">
+    <form method="post" action="" id="form">
         {% csrf_token %}
         <label for="name" >Enter name</label><br>
         <input type="text" name="name" value={{ name }}><br>
         <label for="description">Enter description</label><br>
-        <input type="text" name="description" value={{ description }}><br>
+        <textarea name="description" value={{ description }}></textarea><br>
         <label for="quantity" >Enter quantity</label><br>
         <input type="number" name="quantity" value={{ quantity }}><br>
         <input type="submit" value="submit"><br>
     </form>
+
 </body>
 </html>

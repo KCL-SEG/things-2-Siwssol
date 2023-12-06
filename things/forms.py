@@ -8,7 +8,7 @@ class ThingForm(forms.Form):
     name = forms.CharField(label = "name", max_length=35)
     description = forms.CharField(label = "description", max_length=120)
     quantity = forms.IntegerField(label = "quantity",
-                                  validators=[MinValueValidator(0),MaxValueValidator(50))
+                                  validators=[MinValueValidator(0),MaxValueValidator(50)])
 
     def clean(self):
         super().clean()
