@@ -10,9 +10,9 @@
     <form method="post" action="" id="form">
         {% csrf_token %}
         <label for="name" >Enter name</label><br>
-        <input type="text" name="name" value="{{ name }}">{{ name }}<br>
+        <input type="text" name="name" value="{{ name }}" maxlength="35">{{ name }}<br>
         <label for="description">Enter description</label><br>
-        <textarea name="description">{{ description }}</textarea><br>
+        <textarea name="description" maxlength="120">{{ description }}</textarea><br>
         <label for="quantity" >Enter quantity</label><br>
         <input type="number" name="quantity" value="{{ quantity }}">{{ quantity }}<br>
         <input type="submit" value="submit"><br>
